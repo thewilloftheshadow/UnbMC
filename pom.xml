@@ -116,6 +116,6 @@
             <groupId>com.github.kevinsawicki</groupId>
             <artifactId>http-request</artifactId>
             <version>6.0</version>
-          </dependency>
+        </dependency>
     </dependencies>
 </project>

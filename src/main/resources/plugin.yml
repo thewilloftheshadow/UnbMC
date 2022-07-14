@@ -8,14 +8,14 @@ load: POSTWORLD
 website: "https://github.com/thewilloftheshadow/UnbMC"
 description: Automatically give and remove Discord roles from players based on their play time within your server.
 permissions:
-    unbmc.command.balance:
+    unbmc.balance:
         description: "Allows the user to check their balance."
         default: true
 commands:
     balance:
         usage: /balance
         description: "Check your balance."
-        permission: unbmc.command.balance
+        permission: unbmc.balance
 # permissions:
 #     unbmc.check:
 #         default: true

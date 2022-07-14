@@ -11,6 +11,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.shadowdev.unbmc.commands.BalanceCommand;
+import com.shadowdev.unbmc.listeners.ChatListener;
 
 public final class UnbMC extends JavaPlugin {
     public final Logger logger = this.getLogger();
@@ -40,23 +41,7 @@ public final class UnbMC extends JavaPlugin {
             new Metrics(this, 15762);
 
             getCommand("balance").setExecutor(new BalanceCommand(this));
-
-            // getCommand("activity").setExecutor(new ActivityCommand(this));
-            // getCommand("lastonline").setExecutor(new LastOnlineCommand(this));
-
-            // this.activityCheck = new ActivityCheck(this);
-
-            // this.activityCheck.logRoles();
-
-            // Boolean autosyncEnabled = getConfig().getBoolean("autosync-enabled");
-            // int autosyncInterval = getConfig().getInt("autosync-interval");
-
-            // if (autosyncEnabled) {
-            // Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () ->
-            // this.activityCheck.checkAllPlayers(),
-            // (20 * autosyncInterval), (20 * autosyncInterval));
-            // debug("Autosync enabled. Interval: " + autosyncInterval + " seconds.");
-            // }
+            Bukkit.getPluginManager().registerEvents(new ChatListener(this), this);
         }
 
     }
