@@ -17,10 +17,22 @@ symbol:
   placement: "before"
 
 # Chat money settings
+# Cooldown is in seconds
 chat-money:
   cooldown: 15
   min: 1
   max: 5
+
+# Guess the number settings
+# Time is in minutes
+guess-the-number:
+  time:
+    min: 2
+    max: 5
+  payout:
+    min: 5
+    max: 10
+  
 
 # ==========================================================================================
 

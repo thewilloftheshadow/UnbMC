@@ -20,6 +20,9 @@ public final class UnbMC extends JavaPlugin {
 
     public final int currentConfig = 1;
     public String apiToken = "";
+    public String activeGame = "guessNumber";
+    public String numberToGuess = "5";
+    public int gamePrize = 10;
 
     @Override
     public void onEnable() {
